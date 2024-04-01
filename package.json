@@ -1,0 +1,39 @@
+{
+  "name": "react-basics",
+  "version": "1.0.0",
+  "description": "this is my react basics repo",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukulanandbunkar/reactBasics.git"
+  },
+  "keywords": [
+    "react",
+    "mukul",
+    "anand",
+    "basics"
+  ],
+  "author": "MUKUL ANAND BUNKAR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukulanandbunkar/reactBasics/issues"
+  },
+  "homepage": "https://github.com/mukulanandbunkar/reactBasics#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist":[
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ]
+}
