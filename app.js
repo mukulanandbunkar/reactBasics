@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 
 // const heading = React.createElement(
@@ -64,9 +64,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(body)
 
 /**
- * React is nothing but a library because it will impact on the protion which we are targeting
- * let say we have root folder which we are targeting so react is always target that small portion.
- * thats why we can inject react in existing framework since it will impact small portion.
+   * React is nothing but a library because it will impact on the protion which we are targeting
+   * let say we have root folder which we are targeting so react is always target that small portion.
+   * thats why we can inject react in existing framework since it will impact small portion.
  */
 
 // const heading = React.createElement(
@@ -77,21 +77,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // console.log(heading);
 
 /**
- * JSX is not a html, its a html or xml like syntax
- * below is the example of react element
+   * JSX is not a html, its a html or xml like syntax
+   * below is the example of react element
  */
 
 // const headingWithJsx = <h1 className='head'>this is my heading with jsx</h1>
 // console.log(headingWithJsx);
 /**
- * output of this headingWithJsx is same  object
- * BEbel in the parcel responsible of converting JSX => React.createElement => JS object => html Element(render)
- * bebel is a trnaspiler
+   * output of this headingWithJsx is same  object
+   * BEbel in the parcel responsible of converting JSX => React.createElement => JS object => html Element(render)
+   * bebel is a trnaspiler
  */
 
 /**
- * Functional component
- * functional component is a js function which return jxs into it
+   * Functional component
+   * functional component is a js function which return jxs into it
  */
 
 const Title = () => <div>this is my title</div>;
@@ -99,21 +99,19 @@ const Title = () => <div>this is my title</div>;
 //Component composition
 // there is multiple way to call same jsx function
 
-/**
- * 
- * Config driven UI
- * the UI will be dynamic as per the data coming from BE that is called config driven UI
+/*
+  * Config driven UI
+  * the UI will be dynamic as per the data coming from BE that is called config driven UI
  */
 
-/**
- * 
- * About react
- * React use reconcilation algorithem to render the UI 
- * it is also called fibre architechture
- * so question is what is this and what is the use of it?
- * react created the virtual DOM which is nothing but a React.createElement obj during state manifulation in the UI
- * it check diff in the old and new virtual DOM and render in the UI
- * thats why react is fast
+/*
+  * About react
+  * React use reconcilation algorithem to render the UI 
+  * it is also called fibre architechture
+  * so question is what is this and what is the use of it?
+  * react created the virtual DOM which is nothing but a React.createElement obj during state manifulation in the UI
+  * it check diff in the old and new virtual DOM and render in the UI
+  * thats why react is fast
  */
 
 /**
@@ -123,13 +121,17 @@ const Title = () => <div>this is my title</div>;
  *  hook gives super power to the variables
  */
 const HeadingComponent = () => {
+   let [num, setNum] = useState(0);
+   const handleClick = () => {
+    num++
+    if (num%5===0) {
+      setNum(num);
+    }
+   }
   return (
     <div className="container">
-      {Title()}
-      <Title />
-      <Title></Title>
-      <h1>this is my Heading Component</h1>
-      <marquee direction='up'>this is my marquee</marquee>
+      <h1>{num}</h1>
+      <button onClick= {handleClick}>click</button>
     </div>
   );
 };
